@@ -1,7 +1,7 @@
 <ul>
   <% @trips.each do |trip| %>
     <li>
-      <%= trip.name %>
+      <%= link_to "#{trip.name}", trip_path(trip) %>
     </li>
   <% end %>
 </ul>
