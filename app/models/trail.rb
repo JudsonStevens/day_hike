@@ -1,4 +1,12 @@
 class Trail < ApplicationRecord
   has_many :trail_trips
-  has_many :trails, through: :trail_trips
+  has_many :trips, through: :trail_trips
+
+  # def total_trips_length
+  #   joins(:trips).select("")
+  # end
+
+  def total_number_of_trips
+    trips.count
+  end
 end 
