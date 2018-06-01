@@ -21,7 +21,7 @@
   <h4>
     <% @trails.each do |trail| %>
       <li>
-        <%= trail.name %>
+        <%= link_to "#{trail.name}", trail_path(trail) %>
         <%= trail.address %>
         <%= trail.length %>
       </li>
