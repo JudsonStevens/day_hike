@@ -13,7 +13,10 @@ describe 'Visitor' do
       expect(page).to have_content(trail1.name)
       expect(page).to have_content(trail1.address)
       expect(page).to have_content(trail1.length)
-      expect(page).to have_content("Total length of all hiking trips with this trail: #{trip1.total_trail_length + trip2.total_trail_length}")
+      expect(page).to have_content(trip1.name)
+      expect(page).to have_content(trip1.total_trail_length)
+      expect(page).to have_content(trip2.name)
+      expect(page).to have_content(trip2.total_trail_length)
     end
   end
 end
