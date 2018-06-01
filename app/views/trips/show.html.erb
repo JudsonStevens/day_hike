@@ -7,7 +7,12 @@
 </h2>
 
 <h2>
-  Average Distance: <%= @trip.average_trail_length.to_f %> miles.
+  Average Distance: <%= @trip.average_trail_length %> miles.
+</h2>
+
+<h2>
+  Longest Trail Distance: <%= @trip.longest_trail.length %> miles.
+</h2>
 <ul>
   <h4>
     <% @trails.each do |trail| %>
