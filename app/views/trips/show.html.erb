@@ -5,6 +5,9 @@
 <h2>
   Total Length: <%= @trip.total_trail_length %> miles.
 </h2>
+
+<h2>
+  Average Distance: <%= @trip.average_trail_length.to_f %> miles.
 <ul>
   <h4>
     <% @trails.each do |trail| %>

@@ -5,4 +5,8 @@ class Trip < ApplicationRecord
   def total_trail_length
     trails.sum(:length)
   end
+
+  def average_trail_length
+    trails.average(:length)
+  end
 end
