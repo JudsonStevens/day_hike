@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20180601153141) do
   enable_extension "plpgsql"
 
   create_table "trail_trips", force: :cascade do |t|
-    t.bigint "trails_id"
-    t.bigint "trips_id"
-    t.index ["trails_id"], name: "index_trail_trips_on_trails_id"
-    t.index ["trips_id"], name: "index_trail_trips_on_trips_id"
+    t.bigint "trail_id"
+    t.bigint "trip_id"
+    t.index ["trail_id"], name: "index_trail_trips_on_trail_id"
+    t.index ["trip_id"], name: "index_trail_trips_on_trip_id"
   end
 
   create_table "trails", force: :cascade do |t|
@@ -34,6 +34,6 @@ ActiveRecord::Schema.define(version: 20180601153141) do
     t.datetime "end_date"
   end
 
-  add_foreign_key "trail_trips", "trails", column: "trails_id"
-  add_foreign_key "trail_trips", "trips", column: "trips_id"
+  add_foreign_key "trail_trips", "trails"
+  add_foreign_key "trail_trips", "trips"
 end

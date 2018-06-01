@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'Visitor' do
   context 'visits the trips index page' do
     it 'can see all names of hiking trips' do
-      trip1 = Trip.create(name: 'Denver Trail', start_date: Time.now, end_date: Time.now)
-      trip2 = Trip.create(name: 'LA Trail', start_date: Time.now, end_date: Time.now)
+      trip1 = Trip.create(name: 'Denver Trip', start_date: Time.now, end_date: Time.now)
+      trip2 = Trip.create(name: 'LA Trip', start_date: Time.now, end_date: Time.now)
 
       visit(trips_path)
 
