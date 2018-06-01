@@ -2,6 +2,9 @@
   <%= @trip.name %>
 </h1>
 
+<h2>
+  Total Length: <%= @trip.total_trail_length %> miles.
+</h2>
 <ul>
   <h4>
     <% @trails.each do |trail| %>
